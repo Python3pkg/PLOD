@@ -83,7 +83,7 @@ def detect_type(item):
         type_so_far = "list"
         if hasattr(item, '__getitem__'):
             try:
-                first_key = item.__iter__().next()
+                first_key = next(item.__iter__())
                 first_value = item.__getitem__(first_key)
                 type_so_far = "iterable_dict"
                 # we now know we have a basic dict. But does it fully support

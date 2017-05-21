@@ -47,8 +47,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'PLOD'
-copyright = u'2014, Maker Redux Corporation'
+project = 'PLOD'
+copyright = '2014, Maker Redux Corporation'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -201,8 +201,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'PLOD.tex', u'PLOD Documentation',
-   u'Maker Redux Corporation', 'manual'),
+  ('index', 'PLOD.tex', 'PLOD Documentation',
+   'Maker Redux Corporation', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -231,8 +231,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'plod', u'PLOD Documentation',
-     [u'Maker Redux Corporation'], 1)
+    ('index', 'plod', 'PLOD Documentation',
+     ['Maker Redux Corporation'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -245,8 +245,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'PLOD', u'PLOD Documentation',
-   u'Maker Redux Corporation', 'PLOD', 'One line description of project.',
+  ('index', 'PLOD', 'PLOD Documentation',
+   'Maker Redux Corporation', 'PLOD', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -266,10 +266,10 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'PLOD'
-epub_author = u'Maker Redux Corporation'
-epub_publisher = u'Maker Redux Corporation'
-epub_copyright = u'2014, Maker Redux Corporation'
+epub_title = 'PLOD'
+epub_author = 'Maker Redux Corporation'
+epub_publisher = 'Maker Redux Corporation'
+epub_copyright = '2014, Maker Redux Corporation'
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'PLOD'

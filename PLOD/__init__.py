@@ -4,7 +4,7 @@
 #
 # Version 0.1.7
     
-import internal
+from . import internal
 import types as typemod
 # import bson
 
@@ -999,7 +999,7 @@ class PLOD(object):
                 if not key in attr_width:
                     attr_width[key] = 0
         # get a sorted list of keys
-        attr_order = attr_width.keys()
+        attr_order = list(attr_width.keys())
         attr_order.sort()
         # not get minimum widths
         #  (this is done as a seperate step to account for 'None' and other conditions.
@@ -1447,51 +1447,51 @@ if __name__ == "__main__":
             {"name": "Bob",   "age": 19, "zip": {"zap": "ABabping"}}
         ]
 
-        print "before:"
-        print PLOD(my_list).returnString()
+        print("before:")
+        print(PLOD(my_list).returnString())
 
         final = PLOD(my_list).sort("age").returnList()
         
-        print "after:"
-        print PLOD(final).returnString()
+        print("after:")
+        print(PLOD(final).returnString())
 
     else:
-        print "==================================="
-        print
+        print("===================================")
+        print()
         import doctest
-        print "Testing begins. Errors found:"
-        print doctest.run_docstring_examples(PLOD, None)
-        print doctest.run_docstring_examples(PLOD.__init__, None)
+        print("Testing begins. Errors found:")
+        print(doctest.run_docstring_examples(PLOD, None))
+        print(doctest.run_docstring_examples(PLOD.__init__, None))
         # list modification
-        print doctest.run_docstring_examples(PLOD.dropKey, None)
-        print doctest.run_docstring_examples(PLOD.addKey, None)
-        print doctest.run_docstring_examples(PLOD.upsert, None)
-        print doctest.run_docstring_examples(PLOD.insert, None)
-        print doctest.run_docstring_examples(PLOD.deleteByOrigIndex, None)
-        print doctest.run_docstring_examples(PLOD.deleteByOrigIndexList, None)
+        print(doctest.run_docstring_examples(PLOD.dropKey, None))
+        print(doctest.run_docstring_examples(PLOD.addKey, None))
+        print(doctest.run_docstring_examples(PLOD.upsert, None))
+        print(doctest.run_docstring_examples(PLOD.insert, None))
+        print(doctest.run_docstring_examples(PLOD.deleteByOrigIndex, None))
+        print(doctest.run_docstring_examples(PLOD.deleteByOrigIndexList, None))
         # list arrangement
-        print doctest.run_docstring_examples(PLOD.renumber, None)
-        print doctest.run_docstring_examples(PLOD.sort, None)
+        print(doctest.run_docstring_examples(PLOD.renumber, None))
+        print(doctest.run_docstring_examples(PLOD.sort, None))
         # list filters
-        print doctest.run_docstring_examples(PLOD.eq, None)
-        print doctest.run_docstring_examples(PLOD.ne, None)
-        print doctest.run_docstring_examples(PLOD.gt, None)
-        print doctest.run_docstring_examples(PLOD.gte, None)
-        print doctest.run_docstring_examples(PLOD.lt, None)
-        print doctest.run_docstring_examples(PLOD.lte, None)
-        print doctest.run_docstring_examples(PLOD.hasKey, None)
-        print doctest.run_docstring_examples(PLOD.missingKey, None)
-        print doctest.run_docstring_examples(PLOD.contains, None)
+        print(doctest.run_docstring_examples(PLOD.eq, None))
+        print(doctest.run_docstring_examples(PLOD.ne, None))
+        print(doctest.run_docstring_examples(PLOD.gt, None))
+        print(doctest.run_docstring_examples(PLOD.gte, None))
+        print(doctest.run_docstring_examples(PLOD.lt, None))
+        print(doctest.run_docstring_examples(PLOD.lte, None))
+        print(doctest.run_docstring_examples(PLOD.hasKey, None))
+        print(doctest.run_docstring_examples(PLOD.missingKey, None))
+        print(doctest.run_docstring_examples(PLOD.contains, None))
         # list return results
-        print doctest.run_docstring_examples(PLOD.returnList, None)
-        print doctest.run_docstring_examples(PLOD.returnString, None)
-        print doctest.run_docstring_examples(PLOD.returnCSV, None)
-        print doctest.run_docstring_examples(PLOD.returnIndexList, None)
-        print doctest.run_docstring_examples(PLOD.returnOneIndex, None)
-        print doctest.run_docstring_examples(PLOD.returnOneEntry, None)
-        print doctest.run_docstring_examples(PLOD.returnValue, None)
-        print doctest.run_docstring_examples(PLOD.returnValueList, None)
-        print doctest.run_docstring_examples(PLOD.found, None)
-        print doctest.run_docstring_examples(PLOD.missing, None)
-        print doctest.run_docstring_examples(PLOD.count, None)
-        print "Tests done."
+        print(doctest.run_docstring_examples(PLOD.returnList, None))
+        print(doctest.run_docstring_examples(PLOD.returnString, None))
+        print(doctest.run_docstring_examples(PLOD.returnCSV, None))
+        print(doctest.run_docstring_examples(PLOD.returnIndexList, None))
+        print(doctest.run_docstring_examples(PLOD.returnOneIndex, None))
+        print(doctest.run_docstring_examples(PLOD.returnOneEntry, None))
+        print(doctest.run_docstring_examples(PLOD.returnValue, None))
+        print(doctest.run_docstring_examples(PLOD.returnValueList, None))
+        print(doctest.run_docstring_examples(PLOD.found, None))
+        print(doctest.run_docstring_examples(PLOD.missing, None))
+        print(doctest.run_docstring_examples(PLOD.count, None))
+        print("Tests done.")
